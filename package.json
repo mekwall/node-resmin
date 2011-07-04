@@ -1,21 +1,19 @@
 {
     "name" : "resmin",
-    "version" : "0.0.1",
+    "version" : "0.0.2",
     "author" : "Marcus Ekwall",
     "description" : "All-in-one compressor/merger/minifier middleware for connect/express",
-    "homepage" : "https://github.com/mekwall/resmin",
-    "repository":
-    {
+    "homepage" : "https://github.com/mekwall/node-resmin",
+    "repository": {
         "type": "git",
-        "url": "git://github.com/mekwall/resmin.git"
+        "url": "git://github.com/mekwall/node-resmin.git"
     },
     "engines" : { "node" : ">= 0.4.x" },
     "main" : "./index.js",
-    "dependencies" :
-	{
+    "dependencies" : {
         "uglify-js": ">= 1.0.1",
         "uglifycss": ">= 0.0.3",
         "mime": ">= 1.2.2",
         "compress": ">= 0.1.9"
-	}
+    }
 }
