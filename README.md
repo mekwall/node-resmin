@@ -58,4 +58,4 @@ Example when using jade:
 ## Additional credits
 
 Credits and thanks to [tomgallacher](https://github.com/tomgallacher) for [gzippo](https://github.com/tomgallacher/gzippo) and 
-[bengourley](https://github.com/bengourley) for [minj](https://github.com/bengourley/minj) which resmin is loosely based up.
+[bengourley](https://github.com/bengourley) for [minj](https://github.com/bengourley/minj) which resmin is loosely based upon.
