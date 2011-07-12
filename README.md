@@ -24,7 +24,7 @@ Example configuration:
         js: {
             "all": [
                 "//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js",
-                "//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js",
+                "//ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js",
                 "/js/foo.js",
                 "/js/bar.js",
                 "/js/baz.js"
@@ -43,17 +43,17 @@ Example configuration:
 Instantiate resmin and add the middleware and dynamic helper to connect/express.
     
     var resmin = require('resmin');
-	app.use(resmin.middleware(__dirname+'/public/'), resminConfig);
-    app.dynamicHelper(resmin.dynamicHelper);
+	app.use(resmin.middleware(__dirname+'/public/', resminConfig));
+    app.dynamicHelpers(resmin.dynamicHelper);
 
 The resmin variable is now accessible through your template engine of choice.
 
 Example when using jade:
 
+    - each url in resmin.css.all
+      link(rel='stylesheet', href=url)
     - each url in resmin.js.all
       script(src=url)
-    - each url in resmin.css.all
-      style(alt='stylesheet', href=url)
       
 ## Additional credits
 
