@@ -1,0 +1,20 @@
+{
+    "name" : "resmin-tests",
+    "version" : "0.0.1",
+    "author" : "Marcus Ekwall",
+    "description" : "Test suite for resmin",
+    "homepage" : "https://github.com/mekwall/node-resmin",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/mekwall/node-resmin.git"
+    },
+    "engines" : { "node" : ">= 0.4.x" },
+    "main" : "./app.js",
+    "dependencies" : {
+        "express": ">= 2.4.2",
+        "jade": ">= 0.12.4",
+        "tobi": ">= 0.3.0",
+        "less": ">= 1.1.2",
+	"zombie": ">= 0.0.1"
+    }
+}
