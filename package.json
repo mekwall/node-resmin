@@ -1,6 +1,6 @@
 {
     "name" : "resmin",
-    "version" : "0.0.4",
+    "version" : "0.0.5",
     "author" : "Marcus Ekwall",
     "description" : "All-in-one compressor/merger/minifier middleware for connect/express",
     "homepage" : "https://github.com/mekwall/node-resmin",
