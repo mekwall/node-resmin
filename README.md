@@ -69,7 +69,7 @@ The resmin variable is now accessible through your template engine of choice.
   link(rel='stylesheet', href=url)
 - each url in resmin.js.all
   script(src=url)
-```yaml
+```
 
 ###Example when using ejs:
 
@@ -80,7 +80,7 @@ The resmin variable is now accessible through your template engine of choice.
 <% for (url in resmin.js.all) { %>
     <script src="<%= resmin.js.all[url] %>"></script>
 <% } %>
-```html
+```
 
 ###Example when using less:
 
