@@ -57,7 +57,7 @@ var resminConfig = {
 Instantiate resmin and add the middleware and dynamic helper to connect/express.
     
     var resmin = require('resmin');
-	app.use(resmin.middleware(__dirname+'/public/', resminConfig));
+	app.use(resmin.middleware(express, __dirname+'/public/', resminConfig));
     app.dynamicHelpers(resmin.dynamicHelper);
 
 The resmin variable is now accessible through your template engine of choice.
