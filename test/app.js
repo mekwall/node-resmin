@@ -1,6 +1,6 @@
 var tobi = require('tobi'),
     express = require('express'),
-    resmin = require('../index.js'),
+    resmin = require('../index'),
     app = express.createServer();
 
 var resminConfig = {
@@ -19,7 +19,8 @@ var resminConfig = {
             "//fonts.googleapis.com/css?family=Inconsolata:regular&v1",
             "/css/foo.css",
             "/css/bar.css",
-            "/css/baz.less"
+            "/css/baz.less",
+			"/css/qux.styl"
         ]
     }
 };
@@ -32,7 +33,7 @@ app.configure(function(){
     resminConfig.merge = true;
     resminConfig.minify = true;
     resminConfig.gzip = true;
-    app.use(resmin.middleware(__dirname + '/public', resminConfig));
+    app.use(resmin.middleware(express, __dirname + '/public', resminConfig));
 });
 
 app.dynamicHelpers(resmin.dynamicHelper);
@@ -42,7 +43,7 @@ app.get('/', function(req, res) {
 });
 
 var browser = tobi.createBrowser(app);
-browser.get('/', function(res, $){
+browser.get('/', function (res, $){
     res.should.have.status(200);
     res.should.not.have.status(500);
     res.should.have.header('Content-Type', 'text/html; charset=utf-8');
@@ -50,20 +51,39 @@ browser.get('/', function(res, $){
     var css = $("ul.css"),
         js = $("ul.js");
         
-    css.should.have.many('li');
-    js.should.have.many('li');
+    css.should.have.many("li");
+    js.should.have.many("li");
     
+	console.log("");
     console.log("CSS files:");
     css.find("li").each(function(i,elm){
         console.log(elm.innerHTML);
     });
     
+	console.log("");
     console.log("JavaScript files:");
     js.find("li").each(function(i,elm){
         console.log(elm.innerHTML);
     });
-
-    console.log("All tests passed!");
-    
-    app.close();
+	
+	console.log("");
+	browser.get("/css/baz.less", function (res, $) {
+		res.should.have.status(200);
+		res.should.not.have.status(500);
+		res.should.have.header('Content-Type', 'text/css');
+		console.log("Real-time compilation of LESS: Passed!");
+		
+		console.log("");
+		browser.get("/css/qux.styl", function (res, $) {
+			res.should.have.status(200);
+			res.should.not.have.status(500);
+			res.should.have.header('Content-Type', 'text/css');
+			console.log("Real-time compilation of Stylus: Passed!");
+			
+			console.log("");
+			console.log("All tests passed!");
+			app.close();
+		});
+	});
 });
+

@@ -1,6 +1,6 @@
 # resmin
 	
-All-in-one minifier/merger/compressor middleware for connect/express.
+All-in-one minifier/merger/compiler/compressor middleware for connect/express.
 
 ## Installation
 
@@ -21,6 +21,7 @@ Resmin depends on the following libraries:
 
 Resmin has integrated support for the the following libraries:
 
+- [stylus](http://learnboost.github.com/stylus/)
 - [less](https://github.com/cloudhead/less.js)
 
 ## Basic usage
@@ -84,17 +85,37 @@ The resmin variable is now accessible through your template engine of choice.
 
 ###Example when using less:
 
-Just add your .less files either to the css group or the less group. They will get 
-automatically parsed, merged and compressed according to your settings
+Just add your .less files either to the css group. They will be  
+automatically parsed, compiled, merged and compressed according to your settings.
 
 ```javascript
 var resminConfig = {
     ...
-    less: {
+    css: {
         "/css/foo.less",
         "/css/bar.less",
         "/css/baz.less"
     }
+}
+```
+
+###Example when using stylus:
+
+Just add your .less files either to the css group. They will be
+automatically parsed, compiled, merged and compressed according to your settings.
+
+```javascript
+var resminConfig = {
+    ...
+    css: {
+        "/css/foo.styl",
+        "/css/bar.styl",
+        "/css/baz.styl"
+    },
+	stylus: function(style) {
+		// Add your own stylus settings
+		return style;
+	}
 }
 ```
 

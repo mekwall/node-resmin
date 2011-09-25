@@ -1,0 +1,16 @@
+@color: #4D926F;
+
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+#header {
+  .rounded-corners(10px);
+  color: @color;
+  .navigation  { font-size: 12px }
+  .logo        { width: 300px;
+    &:hover    { text-decoration: none }
+  }
+}
