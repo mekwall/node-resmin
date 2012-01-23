@@ -14,7 +14,7 @@ Resmin depends on the following libraries:
 
 - [uglify-js](https://github.com/mishoo/UglifyJS)
 - [uglifycss](https://github.com/fmarcia/UglifyCSS)
-- [compress](https://github.com/waveto/node-compress)
+- [gzip-js](https://github.com/beatgammit/gzip-js)
 - [mime](https://github.com/bentomas/node-mime)
 
 ## Supported
@@ -34,7 +34,7 @@ Resmin is built to be dead simple to use and implement.
 var resminConfig = {
     gzip: true,
     merge: true,
-    compress: true,
+    minify: true,
     js: {
         "all": [
             "//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js",

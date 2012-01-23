@@ -1,3 +1,14 @@
+0.1.1 / 2012-01-23
+==================
+
+  * Updated package.json
+  * Added: dependency for async (used when minifying)
+  * Added: gzip-js (for Windows compatibility)
+  * Removed: node-compress (not Windows compatible)
+  * Fixed: reimplementation of LESS and Stylus integration
+  * Fixed: false appended to filename when gzip set to false. Closes #5
+  * Fixed: mistakes in README
+
 0.1.0 / 2011-09-25
 ==================
 
