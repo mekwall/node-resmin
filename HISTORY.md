@@ -1,3 +1,9 @@
+0.1.2-1 / 2012-01-30
+==================
+
+  * Added: Some log messages to help debugging
+  * Hotfix: Stuck in merge-loop
+
 0.1.2 / 2012-01-30
 ==================
 

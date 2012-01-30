@@ -1,6 +1,6 @@
 {
     "name": "resmin",
-    "version": "0.1.2",
+    "version": "0.1.2-1",
     "author": "Marcus Ekwall <marcus.ekwall@gmail.com>",
 	"maintainer": "Marcus Ekwall",
     "description": "All-in-one compressor/merger/minifier middleware for connect/express",
