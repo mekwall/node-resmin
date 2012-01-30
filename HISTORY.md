@@ -1,10 +1,17 @@
-0.1.1-2 / 2012-01-23
+0.1.2 / 2012-01-30
 ==================
+
+  * Updated package.json
+  * Fixed: Merging process was borked on linux
+  * Fixed: replaced async with gowiththeflow
+
+0.1.1-2 / 2012-01-23
+====================
 
   * Hotfix: properly removed uglify-css this time!
 
 0.1.1-1 / 2012-01-23
-==================
+====================
 
   * Hotfix: csso as dependecy instead of uglify-css
 

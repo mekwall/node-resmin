@@ -1,6 +1,6 @@
 {
     "name": "resmin",
-    "version": "0.1.1-2",
+    "version": "0.1.2",
     "author": "Marcus Ekwall <marcus.ekwall@gmail.com>",
 	"maintainer": "Marcus Ekwall",
     "description": "All-in-one compressor/merger/minifier middleware for connect/express",
@@ -15,6 +15,6 @@
 		"csso": ">= 1.2.9",
         "mime": ">= 1.2.2",
         "gzip-js": ">= 0.3.1",
-		"async": ">= 0.1.15"
+		"gowiththeflow": ">= 1.0.0"
     }
 }
