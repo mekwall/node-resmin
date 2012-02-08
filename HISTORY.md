@@ -1,3 +1,7 @@
+0.1.2-2 / 2012-02-08
+
+  * Hotfix: Stupid bug with URIs getting passed to merger
+  
 0.1.2-1 / 2012-01-30
 ==================
 

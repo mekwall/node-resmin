@@ -3,4 +3,5 @@ test
 testing
 examples
 *.log
+*.tmp
 node_modules
