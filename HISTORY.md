@@ -1,3 +1,8 @@
+0.1.3 / 2012-02-15
+
+  * Made nib optional
+  * Fixed: Stylus configuration should work properly now
+
 0.1.2-2 / 2012-02-08
 
   * Hotfix: Stupid bug with URIs getting passed to merger
